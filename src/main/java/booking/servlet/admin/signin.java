@@ -1,4 +1,4 @@
-package booking.servlet.client;
+package booking.servlet.admin;
 
 import booking.Service.UserService;
 import booking.Utils.Validator;
@@ -10,17 +10,14 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
-@WebServlet(name = "SigninServlet", value = "/signin")
-public class signIn extends HttpServlet {
+@WebServlet(name = "SigninServlet", value = "/admin/signin")
+public class signin extends HttpServlet {
     private final UserService userService = new UserService();
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("/WEB-INF/views/signInView.jsp").forward(request, response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/WEB-INF/views/signinAdminView.jsp").forward(request, response);
     }
 
     @Override
@@ -33,7 +30,6 @@ public class signIn extends HttpServlet {
         violations.put("usernameViolations", Validator.of(values.get("username"))
                 .isNotNullAndEmpty()
                 .isNotBlankAtBothEnds()
-                .isAtMostOfLength(10)
                 .isExistent(userFromServer.isPresent(), "Tên đăng nhập")
                 .toList());
         violations.put("passwordViolations", Validator.of(values.get("password"))
@@ -44,16 +40,16 @@ public class signIn extends HttpServlet {
                 .toList());
         System.out.println(Optional.of(userFromServer));
         int sumOfViolations = violations.values().stream().mapToInt(List::size).sum();
-        // Nếu sumOfViolations trả về 0 là không có lỗi và user đó có trong db
         if (sumOfViolations == 0 && userFromServer.isPresent()) {
-            // Trả về session hiện tại của user
-            request.getSession().setAttribute("currentUser", userFromServer.get());
-            //Chuyển hướng trang
-            response.sendRedirect("index.jsp");
+            User user = userFromServer.get();
+            if (Arrays.asList("ADMIN", "EMPLOYEE").contains(user.getRole())) {
+                request.getSession().setAttribute("currentUser", user);
+                response.sendRedirect("http://localhost:8080/demo1_war_exploded/index.jsp");
+            }
         } else {
             request.setAttribute("values", values);
             request.setAttribute("violations", violations);
-            request.getRequestDispatcher("/WEB-INF/views/signInView.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/views/signinAdminView.jsp").forward(request, response);
         }
     }
 }

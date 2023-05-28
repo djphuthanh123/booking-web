@@ -13,6 +13,7 @@
     <title>Title</title>
 </head>
 <body>
+<p><a href="${pageContext.request.contextPath}/admin/transportManager">Quay lại</a></p>
 
       <h1 >${requestScope.transport.id}</h1>
       <h1 >Tên Phương tiện</h1>

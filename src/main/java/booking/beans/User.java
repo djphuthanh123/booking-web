@@ -48,8 +48,8 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String passWord) {
+        this.password = passWord;
     }
 
     public String getFullName() {
@@ -112,8 +112,8 @@ public class User {
     public String toString() {
         return new StringJoiner(", ", User.class.getSimpleName() + "[", "]")
                 .add("id=" + id)
-                .add("username='" + username + "'")
-                .add("password='" + password + "'")
+                .add("userName='" + username + "'")
+                .add("passWord='" + password + "'")
                 .add("fullName='" + fullName + "'")
                 .add("email='" + email + "'")
                 .add("phoneNumber='" + phoneNumber + "'")

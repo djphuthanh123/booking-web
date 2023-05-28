@@ -27,7 +27,7 @@ public class createTransportServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/views/createTransportView.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/views/transportCreateView.jsp").forward(req,resp);
     }
 
     @Override
@@ -49,11 +49,11 @@ public class createTransportServlet extends HttpServlet {
         if (sumOfViolation == 0){
             ImageUD.upload(req).ifPresent(transport::setImageName);
             transportService.insert(transport);
-            req.getRequestDispatcher("/WEB-INF/views/createTransportView.jsp").forward(req,resp);
+            req.getRequestDispatcher("/WEB-INF/views/transportCreateView.jsp").forward(req,resp);
         }else {
             req.setAttribute("transport", transport);
             req.setAttribute("violations", violations);
-            req.getRequestDispatcher("/WEB-INF/views/createTransportView.jsp").forward(req,resp);
+            req.getRequestDispatcher("/WEB-INF/views/transportCreateView.jsp").forward(req,resp);
         }
     }
 }

@@ -13,12 +13,14 @@
 <body>
 <p><a href="${pageContext.request.contextPath}/index.jsp">Quay lại</a></p>
 <h1>Đăng nhập</h1>
-<form action="${pageContext.request.contextPath}/signin" method="post">
-  <input name="username"
-         placeholder="Tên đăng nhập"
-         type="text"
-         autocomplete="off"
-         value="${requestScope.values.username}">
+<form action="${pageContext.request.contextPath}/admin/signin" method="post">
+  <label>
+    <input name="username"
+           placeholder="Tên đăng nhập"
+           type="text"
+           autocomplete="off"
+           value="${requestScope.values.username}">
+  </label>
   <br>
   <c:if test="${not empty requestScope.violations.usernameViolations}">
     <c:forEach var="violation" items="${requestScope.violations.usernameViolations}">

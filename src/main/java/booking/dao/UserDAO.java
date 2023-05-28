@@ -13,17 +13,21 @@ import java.util.List;
 import java.util.Optional;
 @RegisterBeanMapper(User.class)
 public interface UserDAO extends DAO<User> {
+    //
+    // ;
     @Override
-    @SqlUpdate("INSERT INTO user VALUES (default, :username, :password, :fullname, " +
-            ":email, :phoneNumber, :gender, :address, :role)")
+    @SqlUpdate("INSERT INTO user (userName, password, fullName, address, gender, email, phoneNumbers, role, createAt)\n" +
+            "VALUES (:username, :password, :fullName, :address, :gender, :email, :phoneNumber, :role, :createAt)\n")
     @GetGeneratedKeys("id")
     long insert(@BindBean User user);
 
+
     @Override
-    @SqlUpdate("UPDATE user SET username = :username, password = :password, fullname = :fullname, " +
-            "email = :email, phoneNumber = :phoneNumber, gender = :gender, address = :address, role = :role " +
+    @SqlUpdate("UPDATE user SET username = :username, password = :password, fullName = :fullName, " +
+            "email = :email, phoneNumbers = :phoneNumber, gender = :gender, address = :address, role = :role " +
             "WHERE id = :id")
     void update(@BindBean User user);
+
 
     @Override
     @SqlUpdate("DELETE FROM user WHERE id = :id")

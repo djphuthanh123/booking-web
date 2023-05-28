@@ -16,15 +16,15 @@ import java.util.*;
 public class signin extends HttpServlet {
     private final UserService userService = new UserService();
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/views/signinAdminView.jsp").forward(request, response);
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("/WEB-INF/views/signinAdminView.jsp").forward(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Map<String, String> values = new HashMap<>();
-        values.put("username", request.getParameter("username"));
-        values.put("password", request.getParameter("password"));
+        values.put("username", req.getParameter("username"));
+        values.put("password", req.getParameter("password"));
         Map<String, List<String>> violations = new HashMap<>();
         Optional<User> userFromServer = userService.getByUsername(values.get("username"));
         violations.put("usernameViolations", Validator.of(values.get("username"))
@@ -43,13 +43,12 @@ public class signin extends HttpServlet {
         if (sumOfViolations == 0 && userFromServer.isPresent()) {
             User user = userFromServer.get();
             if (Arrays.asList("ADMIN", "EMPLOYEE").contains(user.getRole())) {
-                request.getSession().setAttribute("currentUser", user);
-                response.sendRedirect("http://localhost:8080/demo1_war_exploded/index.jsp");
-            }
+                req.getSession().setAttribute("currentUser", user);
+                resp.sendRedirect(req.getContextPath() + "/admin");            }
         } else {
-            request.setAttribute("values", values);
-            request.setAttribute("violations", violations);
-            request.getRequestDispatcher("/WEB-INF/views/signinAdminView.jsp").forward(request, response);
+            req.setAttribute("values", values);
+            req.setAttribute("violations", violations);
+            req.getRequestDispatcher("/WEB-INF/views/signinAdminView.jsp").forward(req, resp);
         }
     }
 }

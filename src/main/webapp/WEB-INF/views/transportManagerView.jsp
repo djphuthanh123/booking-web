@@ -14,7 +14,7 @@
     <title>Transport Manager</title>
 </head>
 <body>
-    <p><a href="${pageContext.request.contextPath}/index.jsp">Quay lại</a></p>
+    <p><a href="${pageContext.request.contextPath}/admin">Quay lại</a></p>
     <h1>Quản lí phương tiện</h1>
     <a href="${pageContext.request.contextPath}/admin/transportManager/create">Tạo mới phương tiện</a>
     <table border="1">

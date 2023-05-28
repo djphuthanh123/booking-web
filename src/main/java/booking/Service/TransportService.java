@@ -2,7 +2,7 @@ package booking.Service;
 
 import booking.beans.Transport;
 import booking.dao.TransportDAO;
-import jakarta.servlet.http.HttpServlet;
+
 
 public class TransportService extends Service<Transport, TransportDAO> implements TransportDAO {
     public TransportService() {
@@ -11,6 +11,6 @@ public class TransportService extends Service<Transport, TransportDAO> implement
 
     @Override
     public int count() {
-        return 0;
+        return jdbi.withExtension(TransportDAO.class,TransportDAO::count);
     }
 }

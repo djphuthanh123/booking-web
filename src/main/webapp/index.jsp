@@ -9,11 +9,7 @@
   <title>Trang chủ</title>
 </head>
 <body>
-<jsp:include page="_header.jsp"/>
-
-<h1>Đây là trang chủ </h1>
-  <a href="${pageContext.request.contextPath}/admin/transportManager">Quản lí xe</a>
-  <a href="${pageContext.request.contextPath}/admin/userManager">Quản lí người dùng</a>
-
+  <h1>Trang chủ</h1>
+  <jsp:include page="_header.jsp"/>
 </body>
 </html>

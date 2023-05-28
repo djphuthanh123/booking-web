@@ -12,7 +12,7 @@
     <title>Quản lí Tài khoản</title>
 </head>
 <body>
-<p><a href="${pageContext.request.contextPath}/index.jsp">Quay lại</a></p>
+<p><a href="${pageContext.request.contextPath}/admin">Quay lại</a></p>
 <h1>Quản lí Tải khoản</h1>
     <a href="${pageContext.request.contextPath}/admin/userManager/create">Tạo tài khoản</a>
     <table border="1">

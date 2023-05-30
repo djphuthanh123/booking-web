@@ -48,9 +48,9 @@ public interface TransportDAO extends DAO<Transport> {
     List<Transport> getOrderedPart(@Bind("limit") int limit, @Bind("offset") int offset,
                                    @Define("orderBy") String orderBy, @Define("orderDir") String orderDir);
 
-    //    @SqlQuery("SELECT c.* FROM product_category pc JOIN category c ON pc.categoryId = c.id WHERE productId = :productId")
+//    SqlQuery("SELECT c.* FROM product_category pc JOIN category c ON pc.categoryId = c.id WHERE productId = :productId")
 //    Optional<Transport> getByTripsId(@Bind("productId") long productId);
-//
+
     @SqlQuery("SELECT COUNT(id) FROM Transport")
     int count();
 }

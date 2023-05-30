@@ -38,7 +38,6 @@ public class signin extends HttpServlet {
                 .isAtMostOfLength(1)
                 .isEqualTo(userFromServer.map(User::getPassword).orElse(""), "Mật khẩu")
                 .toList());
-        System.out.println(Optional.of(userFromServer));
         int sumOfViolations = violations.values().stream().mapToInt(List::size).sum();
         if (sumOfViolations == 0 && userFromServer.isPresent()) {
             User user = userFromServer.get();

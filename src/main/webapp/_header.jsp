@@ -5,5 +5,5 @@
             Đăng ký
         </a>
         <a  href="${pageContext.request.contextPath}/admin/signin" role="button">
-            Đăng nhập
+            Đăng nhập admin
         </a>

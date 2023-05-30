@@ -11,9 +11,9 @@
   <title>Đăng nhập</title>
 </head>
 <body>
-<span style="color: red">Đây là đăng nhập cho quản trí viên ! Vui lòng không phận sử miển vào</span>
+<span style="color: red"> Đây là đăng nhập cho quản trí viên ! Vui lòng không phận sự miển vào</span>
 <p><a href="${pageContext.request.contextPath}/index.jsp">Quay lại</a></p>
-<h1>Đăng nhập</h1>
+<h1>Đăng nhập admin</h1>
 <form action="${pageContext.request.contextPath}/admin/signin" method="post">
   <label>
     <input name="username"

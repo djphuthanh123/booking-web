@@ -29,5 +29,8 @@
         <li>
         <a href="${pageContext.request.contextPath}/admin/userManager">Quản lí người dùng</a>
         </li>
+        <li>
+            <a href="${pageContext.request.contextPath}/admin/routeManager">Quản lí tuyến đường</a>
+        </li>
     </ol>
 

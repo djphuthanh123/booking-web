@@ -32,7 +32,7 @@
         </tr>
         <c:forEach var="transport" varStatus="loop" items="${requestScope.transportList}">
         <tr>
-            <th scope="row">${loop.index + 1}</th>
+            <th scope="row"></th>
             <td>${transport.nameOfTransport}</td>
             <td>${transport.brand}</td>
             <td>${transport.description}</td>

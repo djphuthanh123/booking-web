@@ -17,7 +17,13 @@ public class Transport {
     public Transport() {
     }
 
-    public Transport(long id, String nameOfTransport, String brand, String description, int totalSeat, String imageName, LocalDateTime createAt) {
+    public Transport(long id,
+                     String nameOfTransport,
+                     String brand,
+                     String description,
+                     int totalSeat,
+                     String imageName,
+                     LocalDateTime createAt) {
         this.id = id;
         this.nameOfTransport = nameOfTransport;
         this.brand = brand;

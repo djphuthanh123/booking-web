@@ -11,9 +11,9 @@
     <title>401</title>
 </head>
 <body>
-        <h1>401 not found</h1>
-    <p style="color: red">
-        Mày đéo có quyền ! Cút
+        <h1 style="color: red">401 not found</h1>
+    <p >
+        Bạn không có quyền ở site này 1
     </p>
 </body>
 </html>

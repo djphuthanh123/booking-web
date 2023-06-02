@@ -29,7 +29,6 @@
             <tr>
                 <td>${loop.index + 1}</td>
                 <td>${route.name}</td>
-                <td>${route.distance}</td>
                 <td>
                     <a href="${pageContext.request.contextPath}/admin/routeManager/update?id=${route.id}"
                        role="button">

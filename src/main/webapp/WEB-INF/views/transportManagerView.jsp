@@ -20,12 +20,11 @@
     <table border="1">
         <tr>
             <th>ID</th>
-            <th>Tên</th>
-            <th>Hãng </th>
-            <th>Miêu tả</th>
-            <th>Số ghế </th>
-            <th>Hình ảnh</th>
-            <th>Thời gian tạo</th>
+            <th>Tên của phương tiện</th>
+            <th>Hình ảnh </th>
+            <th>Số xe</th>
+            <th>Miêu tả </th>
+            <th>Số ghế</th>
             <th>Sửa </th>
             <th>Xóa </th>
             <th>Xem chi tiết nhà xe</th>
@@ -34,9 +33,6 @@
         <tr>
             <th scope="row"></th>
             <td>${transport.nameOfTransport}</td>
-            <td>${transport.brand}</td>
-            <td>${transport.description}</td>
-            <td>${transport.totalSeat}</td>
             <td>
                 <c:choose>
                     <c:when test="${empty transport.imageName}">
@@ -49,7 +45,9 @@
                     </c:otherwise>
                 </c:choose>
             </td>
-            <td>${transport.createAt}</td>
+            <td>${transport.licensePlate}</td>
+            <td>${transport.description}</td>
+            <td>${transport.slot}</td>
             <td>
                 <a class="btn btn-success me-2"
                    href="${pageContext.request.contextPath}/admin/transportManager/update?id=${transport.id}"

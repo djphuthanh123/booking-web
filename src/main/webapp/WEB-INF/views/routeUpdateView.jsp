@@ -32,7 +32,7 @@
 <body>
 <a href="${pageContext.request.contextPath}/admin/routeManager">Quay lại</a>
     <form action="${pageContext.request.contextPath}/admin/routeManager/update" method="post">
-      <input type="name" name="id" value="${requestScope.routeFromServer.id}">
+      <input type="hidden" name="id" value="${requestScope.routeFromServer.id}">
       <label>Tên của chuyến
         <input id="nameInput" type="text" name="name" value="${requestScope.routeFromServer.name}">
       </label>

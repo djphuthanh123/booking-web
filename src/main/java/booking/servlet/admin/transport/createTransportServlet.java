@@ -34,10 +34,9 @@ public class createTransportServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Transport transport = new Transport();
         transport.setNameOfTransport(req.getParameter("nameOfTransport"));
-        transport.setBrand(req.getParameter("brand"));
+        transport.setLicensePlate(req.getParameter("licensePlate"));
         transport.setDescription(req.getParameter("description").trim());
-        transport.setCreateAt(LocalDateTime.now());
-        transport.setTotalSeat(Integer.parseInt(req.getParameter("totalSeat")));
+        transport.setSlot(Integer.parseInt(req.getParameter("slot")));
         Map<String, List<String>> violations = new HashMap<>();
         violations.put("nameOfViolation", Validator.of(transport.getNameOfTransport())
                 .toList());

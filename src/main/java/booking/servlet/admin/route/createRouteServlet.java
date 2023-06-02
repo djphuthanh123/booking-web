@@ -24,7 +24,6 @@ public class createRouteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Cities> cityFromServer = citiesService.getAll();
-        System.out.println(cityFromServer.toString());
         req.setAttribute("cityFromServer",cityFromServer);
         req.getRequestDispatcher("/WEB-INF/views/routeCreateView.jsp").forward(req,resp);
     }
@@ -43,8 +42,10 @@ public class createRouteServlet extends HttpServlet {
         violations.put("dropOffPoint",Validator.of(route.getDropOffPoint()).toList());
         int sumOfViolation = violations.values().stream().mapToInt(List::size).sum();
         //------------------------- End -----------------------------------//
-        if (sumOfViolation > 0){
+
+        if (sumOfViolation == 0){
             routeService.insert(route);
+            System.out.println(route.toString());
             req.setAttribute("route", route);
             req.getRequestDispatcher("/WEB-INF/views/routeCreateView.jsp").forward(req,resp);
         }else {

@@ -28,29 +28,20 @@
                placeholder="Tên của phương tiện" value="${requestScope.transport.nameOfTransport}">
     </label>
     <br>
-    <label for="brand">Chọn hãng</label>
-    <select name="brand" id="brand" >
-    <option value="${requestScope.transport.brand}">${requestScope.transport.brand}"</option>
-</select>
-    <br>
-    <label>
-        <textarea  name="description" rows="4" cols="50">
-           ${requestScope.transport.description}
-        </textarea>
+    <label>Nhập biển số xe :
+        <input type="text" name="licensePlate" value="${requestScope.transport.licensePlate}">
     </label>
     <br>
-    <label ></label>
     <c:choose>
         <c:when test="${not empty requestScope.transport.imageName}">
             <img width="50"
                  src="${pageContext.request.contextPath}/image/${requestScope.transport.imageName}"
                  alt="${requestScope.transport.imageName}"
                  title="${requestScope.transport.imageName}">
-                <input type="checkbox"
-                       value="deleteImage"
-                       name="deleteImage" ${not empty requestScope.deleteImage ? 'checked' : ''}>
-                <label >Xóa hình này?</label>
-
+            <input type="checkbox"
+                   value="deleteImage"
+                   name="deleteImage" ${not empty requestScope.deleteImage ? 'checked' : ''}>
+            <label >Xóa hình này?</label>
         </c:when>
         <c:otherwise>
             <div >Không có hình</div>
@@ -60,16 +51,19 @@
            name="image"
            accept="image/*">
     <br>
-    <label for="">Chọn số lượng ghế của phương tiện</label><input type="text" name="totalSeat" id="" value="${requestScope.transport.totalSeat}">
     <br>
-    <input type="hidden" name="imageName" value="${requestScope.transport.imageName}">
+    <input type="text" name="imageName" value="${requestScope.transport.imageName}">
+    <label>
+        <textarea  name="description" rows="4" cols="50">
+           ${requestScope.transport.description}
+        </textarea>
+    </label>
+    <br>
+    <label for="">Chọn số lượng ghế của phương tiện</label>
+    <input type="text" name="slot" id="" value="${requestScope.transport.slot}">
     <button type="submit" >
         Sửa
     </button>
-<%--    <button type="reset"--%>
-<%--            onclick="return confirm('Bạn có muốn để giá trị mặc định?')">--%>
-<%--        Mặc định--%>
-<%--    </button>--%>
 
 </form>
 

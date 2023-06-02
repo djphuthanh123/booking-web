@@ -22,13 +22,12 @@
                placeholder="Tên của phương tiện">
     </label>
     <br>
-    <label for="brand">Chọn hãng</label><select name="brand" id="brand">
-        <option value="Suzuki">Suzuki</option>
-        <option value="Honda">Honda</option>
-    </select>
+    <label>
+        <input type="text" name="licensePlate" placeholder="Nhập biển số xe">
+    </label>
     <br>
     <label>
-        <textarea  name="description" rows="4" cols="50">
+        <textarea  name="description" rows="4" cols="50" placeholder="Nhập miêu tả">
         </textarea>
     </label>
     <br>
@@ -39,7 +38,8 @@
                accept="image/*">
     </label>
     <br>
-    <label for="">Chọn số lượng ghế của phương tiện</label><input type="text" name="totalSeat" id="" value="1">
+    <label for="">Chọn số lượng ghế của phương tiện</label>
+    <input type="text" name="slot" id="" value="1">
     <button>submit</button>
 </form>
 </body>

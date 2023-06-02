@@ -23,7 +23,11 @@ public interface RouteDAO extends DAO<Route>{
 
 
     @Override
-    @SqlUpdate("UPDATE routes SET name = :name, pickUpPoint = :pickUpPoint, dropOffPoint = :dropOffPoint, distance = :distance WHERE (id = :id) ")
+    @SqlUpdate("UPDATE routes SET name = :name, " +
+            "pickUpPoint = :pickUpPoint, " +
+            "dropOffPoint = :dropOffPoint, " +
+            "distance = :distance " +
+            "WHERE (id = :id) ")
     void update(@BindBean Route route);
 
 

@@ -35,7 +35,7 @@ public class signin extends HttpServlet {
         violations.put("passwordViolations", Validator.of(values.get("password"))
                 .isNotNullAndEmpty()
                 .isNotBlankAtBothEnds()
-                .isAtMostOfLength(1)
+                .isAtMostOfLength(1) // Dat defaut la so 1
                 .isEqualTo(userFromServer.map(User::getPassword).orElse(""), "Mật khẩu")
                 .toList());
         int sumOfViolations = violations.values().stream().mapToInt(List::size).sum();

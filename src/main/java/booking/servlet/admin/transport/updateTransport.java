@@ -41,11 +41,11 @@ public class updateTransport extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Transport transport = new Transport();
-        transport.setId(Integer.parseInt(req.getParameter("id")));
+        transport.setId(Long.parseLong(req.getParameter("id")));
         transport.setNameOfTransport(req.getParameter("nameOfTransport"));
-        transport.setBrand(req.getParameter("brand"));
+        transport.setLicensePlate(req.getParameter("licensePlate"));
         transport.setDescription(req.getParameter("description").trim().isEmpty()?null:req.getParameter("description"));
-        transport.setTotalSeat(Integer.parseInt(req.getParameter("totalSeat")));
+        transport.setSlot(Integer.parseInt(req.getParameter("slot")));
         transport.setImageName(req.getParameter("imageName").trim().isEmpty()?null:req.getParameter("imageName"));
         String deleteImage = req.getParameter("deleteImage");
         Map<String, List<String>> violations = new HashMap<>();

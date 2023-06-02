@@ -32,9 +32,10 @@
 
 </head>
 <body>
+<a href="${pageContext.request.contextPath}/admin/routeManager">Quay lại</a>
 <form id="routeForm" action="${pageContext.request.contextPath}/admin/routeManager/create" METHOD="POST">
     <label>Tên của chuyến
-        <input id="nameInput" type="text" name="name">
+        <input id="nameInput" type="text" name="name" placeholder="Hãy chọn điểm đi và điểm đến trước">
     </label>
     <br>
     <label>
@@ -42,7 +43,7 @@
             <option value="">Lựa chọn điểm đi</option>
             <c:forEach var="city" varStatus="loop" items="${requestScope.cityFromServer}">
             <option value="${city.id}">
-                    ${loop.index + 1} -   ${city.name}
+                    ${loop.index + 1}  -   ${city.name}
             </option>
             </c:forEach>
         </select>

@@ -13,17 +13,17 @@ import java.util.List;
 import java.util.Optional;
 @RegisterBeanMapper(Transport.class)
 public interface TransportDAO extends DAO<Transport> {
-    @SqlUpdate("INSERT INTO transport (id, nameOfTransport, brand, imageName, description, createAt, totalSeat)  " +
-            "VALUES (default, :nameOfTransport, :brand, :imageName, :description, :createAt, :totalSeat)")
+    @SqlUpdate("INSERT INTO transport (nameOfTransport, imageName, license_plate, description, slot) "
+            +
+            "VALUES (:nameOfTransport, :imageName, :licensePlate ,:description , :slot)")
     @GetGeneratedKeys("id")
     long insert(@BindBean Transport transport);
 
     @Override
     @SqlUpdate("UPDATE transport SET nameOfTransport = :nameOfTransport, " +
-            "brand = :brand, imageName = :imageName, " +
+            "licensePlate = :licensePlate, imageName = :imageName, " +
             "description = :description, " +
-            "createAt = :createAt, " +
-            "totalSeat = :totalSeat " +
+            "slot = :slot " +
             "WHERE (id = :id) ")
     void update(@BindBean Transport transport);
 

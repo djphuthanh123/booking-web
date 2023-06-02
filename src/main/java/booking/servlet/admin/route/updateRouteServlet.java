@@ -30,7 +30,6 @@ public class updateRouteServlet extends HttpServlet {
         Optional<Route> routeFromServer = routeService.getById(id);
         if (routeFromServer.isPresent()){
             req.setAttribute("routeFromServer",routeFromServer.get());
-            System.out.println(routeFromServer.get());
             req.setAttribute("citiesFromServer",citiesFromServer);
             req.getRequestDispatcher("/WEB-INF/views/routeUpdateView.jsp").forward(req,resp);
         }else {
@@ -54,13 +53,14 @@ public class updateRouteServlet extends HttpServlet {
         int sumOfViolation = violations.values().stream().mapToInt(List::size).sum();
 
         //------------------------- End -----------------------------------//
+        System.out.println(route);
         if (sumOfViolation == 0) {
-                routeService.update(route);
-                req.setAttribute("citiesFromServer", citiesService.getAll());
-                req.getRequestDispatcher("/WEB-INF/views/routeUpdateView.jsp").forward(req, resp);
-
+            routeService.update(route);
+            req.setAttribute("routeFromServer",route);
+            req.setAttribute("citiesFromServer", citiesService.getAll());
+            req.getRequestDispatcher("/WEB-INF/views/routeUpdateView.jsp").forward(req, resp);
         } else {
-            req.setAttribute("routeFromServer", routeService.getById(route.getId()));
+            req.setAttribute("routeFromServer", route.getName());
             req.setAttribute("citiesFromServer", citiesService.getAll());
             req.setAttribute("violations", violations);
             req.getRequestDispatcher("/WEB-INF/views/routeUpdateView.jsp").forward(req, resp);

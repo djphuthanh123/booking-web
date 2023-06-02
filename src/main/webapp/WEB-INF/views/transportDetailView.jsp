@@ -9,6 +9,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <fmt:setLocale value="vi_VN"/>
+<html>
 <head>
     <title>Title</title>
 </head>
@@ -31,6 +32,5 @@
                  alt="${requestScope.transport.imageName}">
           </c:otherwise>
         </c:choose>
-
 </body>
 </html>

@@ -11,10 +11,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import javax.swing.text.html.Option;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @WebServlet(name = "createRoute", value = "/admin/routeManager/create")
 public class createRouteServlet extends HttpServlet {
@@ -37,18 +39,31 @@ public class createRouteServlet extends HttpServlet {
 
         //------------------------Validation Time !------------------------------------//
         Map<String, List<String>> violations = new HashMap<>();
-        violations.put("name",Validator.of(route.getName()).toList());
-        violations.put("pickUpPoint",Validator.of(route.getPickUpPoint()).toList());
-        violations.put("dropOffPoint",Validator.of(route.getDropOffPoint()).toList());
+        Optional<Route> routeFromServer = routeService.getByName(route.getName());
+        violations.put("name",Validator.of(route.getName())
+                .isNotNullAndEmpty()
+                .isNotBlankAtBothEnds()
+                .isNotExistent(routeFromServer.isPresent(),"Quãng đường  ")
+                .toList());
+
         int sumOfViolation = violations.values().stream().mapToInt(List::size).sum();
         //------------------------- End -----------------------------------//
-
+        String successMessage = "Thêm thành công";
+        String errorMessage = "Thêm thất bại ";
         if (sumOfViolation == 0){
-            routeService.insert(route);
-            System.out.println(route.toString());
-            req.setAttribute("route", route);
+            try {
+                routeService.insert(route);
+                req.setAttribute("cityFromServer",citiesService.getAll());
+                req.setAttribute("successMessage", successMessage);
+            }
+            catch(Exception e) {
+                req.setAttribute("cityFromServer",citiesService.getAll());
+                req.setAttribute("route", route);
+                req.setAttribute("errorMessage", errorMessage);
+            }
             req.getRequestDispatcher("/WEB-INF/views/routeCreateView.jsp").forward(req,resp);
         }else {
+            req.setAttribute("cityFromServer",citiesService.getAll());
             req.setAttribute("route", route);
             req.setAttribute("violations", violations);
             req.getRequestDispatcher("/WEB-INF/views/routeCreateView.jsp").forward(req,resp);

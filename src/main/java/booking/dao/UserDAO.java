@@ -16,8 +16,8 @@ public interface UserDAO extends DAO<User> {
     //
     // ;
     @Override
-    @SqlUpdate("INSERT INTO user (userName, password, fullName, address, gender, email, phoneNumbers, role, createAt)\n" +
-            "VALUES (:username, :password, :fullName, :address, :gender, :email, :phoneNumber, :role, :createAt)\n")
+    @SqlUpdate("INSERT INTO user (userName, password, fullName, address, gender, email, phoneNumbers, role)" +
+            "VALUES (:username, :password, :fullName, :address, :gender, :email, :phoneNumber, :role)")
     @GetGeneratedKeys("id")
     long insert(@BindBean User user);
 

@@ -10,52 +10,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c03fda-fc67-4fef-86ee-e0616283c3d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/booking/Service/Authentication/RefreshTokenService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/booking/Utils/GoogleConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/booking/dto/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/booking/dto/GoogleUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/booking/dto/SuccessMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/GoogleCallbackServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/GoogleLoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/client/signIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_footerAdmin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fonts/bootstrap-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fonts/bootstrap-icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/200px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/280px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/50px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/570px-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/570px-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/570px-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/80px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/toast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/gg-login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/Service/TransportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/Service/TransportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/beans/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/dao/TransportDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/dao/TransportDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/filter/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/filter/AuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/signin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/signin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/Service/Authentication/RefreshTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/Service/RouteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/Service/RouteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/dao/RouteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/dao/RouteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/GoogleCallbackServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/GoogleCallbackServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/AdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/route/createRouteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/route/createRouteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/route/routeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/route/routeManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/createTransportServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/createTransportServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/deleteTransportServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/deleteTransportServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/transportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/transportManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/updateTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/updateTransport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/user/createUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/user/createUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_headerAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_headerAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin401View.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin401View.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/user/userManagerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/user/userManagerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_footerAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_footerAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_meta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_meta.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adminView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adminView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/routeCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/routeCreateView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/routeManagerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/routeManagerView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/signinAdminView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/signinAdminView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportCreateView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportDetailView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportDetailView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportManagerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportManagerView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportUpdateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportUpdateView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/_header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userCreateView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userDetailView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userDetailView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManagerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManagerView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userUpdateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userUpdateView.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +44,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Jsp File" />
-        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="Jsp File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -119,6 +98,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/FER/BookShopWeb-main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -306,7 +286,9 @@
       <workItem from="1686116596912" duration="10000" />
       <workItem from="1686118636477" duration="1238000" />
       <workItem from="1686152485046" duration="4689000" />
-      <workItem from="1686162842737" duration="3995000" />
+      <workItem from="1686162842737" duration="14550000" />
+      <workItem from="1686178686904" duration="430000" />
+      <workItem from="1686179654780" duration="911000" />
     </task>
     <servers />
   </component>

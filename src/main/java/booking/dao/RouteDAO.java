@@ -53,6 +53,8 @@ public interface RouteDAO extends DAO<Route>{
     @SqlQuery("SELECT * FROM Routes ORDER BY <orderBy> <orderDir> LIMIT :limit OFFSET :offset")
     List<Route> getOrderedPart(@Bind("limit") int limit, @Bind("offset") int offset,
                                @Define("orderBy") String orderBy, @Define("orderDir") String orderDir);
+    @SqlQuery("SELECT * FROM routes WHERE name =:name")
+    Optional<Route> getByName(@Bind("name") String name);
 
     @SqlQuery("SELECT COUNT(id) FROM routes")
     int count();

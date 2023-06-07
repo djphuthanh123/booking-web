@@ -17,6 +17,11 @@ public class RouteService extends Service<Route, RouteDAO> implements RouteDAO {
     }
 
     @Override
+    public Optional<Route> getByName(String name) {
+        return jdbi.withExtension(RouteDAO.class,dao -> dao.getByName(name));
+    }
+
+    @Override
     public int count() {
         return jdbi.withExtension(RouteDAO.class,RouteDAO::count);
     }

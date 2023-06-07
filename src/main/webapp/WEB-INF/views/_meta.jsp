@@ -26,6 +26,5 @@
 <!-- Custom Styles -->
 <link href="${pageContext.request.contextPath}/css/styles.css" type="text/css" rel="stylesheet">
 
-
 <!-- autoFill name -->
 <script src="${pageContext.request.contextPath}/js/autoFillName.js" type="module"></script>

@@ -43,7 +43,8 @@ public class createUserServlet extends HttpServlet {
 //        Optional<User> userByUsername = userService.getByUsername(user.getUsername());
 //        Optional<User> userByEmail =  userService.getByEmail(user.getEmail());
 //        Optional<User> userByPhoneNumber =  userService.getByPhoneNumber(user.getPhoneNumber());
-        // Chưa validate dữ liệu
+
+        //-------------Validation time !--------------//
         violations.put("usernameViolations", Validator.of(user.getUsername())
                 .toList());
         violations.put("passwordViolations", Validator.of(user.getPassword())

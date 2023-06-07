@@ -27,7 +27,7 @@
                                                 <figure class="card">
                                                         <div class="p-3">
                                                                 <h4 class="title">${requestScope.totalUsers}</h4>
-                                                                <span>Người dùng</span>
+                                                                <span>Người Dùng</span>
                                                         </div>
                                                 </figure>
                                         </div>
@@ -35,7 +35,15 @@
                                                 <figure class="card">
                                                         <div class="p-3">
                                                                 <h4 class="title">${requestScope.totalTransport}</h4>
-                                                                <span>Phương tiện</span>
+                                                                <span>Phương Tiện</span>
+                                                        </div>
+                                                </figure>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                                <figure class="card">
+                                                        <div class="p-3">
+                                                                <h4 class="title">${requestScope.totalRoute}</h4>
+                                                                <span>Quãng Đường</span>
                                                         </div>
                                                 </figure>
                                         </div>
@@ -45,7 +53,9 @@
                 </div> <!-- card.// -->
         </div> <!-- container.// -->
 </section> <!-- section-content.// -->
+
 <jsp:include page="_footerAdmin.jsp"/>
+
 
 </body>
 </html>

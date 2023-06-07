@@ -21,8 +21,8 @@ public class deleteTransportServlet extends HttpServlet {
         Optional<Transport> transportFromServer = transportService.getById(id);
 
         if(transportFromServer.isPresent()){
-            String successMessage = String.format("Xóa thể loại #%s thành công!", id);
-            String errorMessage = String.format("Xóa thể loại #%s thất bại!", id);
+            String successMessage = String.format("Xóa phương tiện #%s thành công!", id);
+            String errorMessage = String.format("Xóa phương tiện  #%s thất bại!", id);
             try {
                 transportService.delete(id);
                 Optional.ofNullable(transportFromServer.get().getImageName()).ifPresent(ImageUD::delete);

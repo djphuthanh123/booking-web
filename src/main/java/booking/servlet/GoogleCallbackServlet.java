@@ -36,7 +36,8 @@ public class GoogleCallbackServlet extends HttpServlet {
         protected void doGet(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
             String code = request.getParameter("code");
-                HttpTransport transport = new NetHttpTransport();
+            ///----------------------------------------Process parse access key of google-------------------------------------------------------------///
+            HttpTransport transport = new NetHttpTransport();
             JsonFactory jsonFactory = new GsonFactory();
             GoogleTokenResponse tokenResponse = new GoogleAuthorizationCodeTokenRequest(
                     transport, jsonFactory,
@@ -56,27 +57,24 @@ public class GoogleCallbackServlet extends HttpServlet {
 
 
             String userInfoJsonString = EntityUtils.toString(entity);
-            ///-----------------------------------------------------------------------------------------------------///
+
 
             Gson gson = new Gson();
             GoogleUser user = gson.fromJson(userInfoJsonString, GoogleUser.class);
             String userEmail = user.getEmail();
-            System.out.println(userEmail);
             //--------------Add value into map-----------------------//
             Map<String, String> values = new HashMap<>();
             values.put("userEmail", userEmail);
             //--------------Validation -----------------------//
             Map<String, List<String>> violations = new HashMap<>();
             Optional<User> userFromServer = userService.getByEmail(userEmail);//
-            System.out.println(userFromServer.toString());
             violations.put("usernameViolations", Validator.of(values.get("userEmail"))
                     .isNotNullAndEmpty()
                     .isNotBlankAtBothEnds()
                     .isExistent(userFromServer.isPresent(), "Tên đăng nhập")
                     .toList());
-
+            //--------------End  -----------------------//
             int sumOfViolations = violations.values().stream().mapToInt(List::size).sum();
-
             if (sumOfViolations == 0 && userFromServer.isPresent()) {
                 User userValue = userFromServer.get();
                 if (Arrays.asList("ADMIN", "EMPLOYEE").contains(userValue.getRole())) {

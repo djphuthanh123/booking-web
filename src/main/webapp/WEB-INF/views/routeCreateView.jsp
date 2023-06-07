@@ -11,56 +11,78 @@
 <fmt:setLocale value="vi_VN"/>
 <html>
 <head>
+    <jsp:include page="_meta.jsp"/>
     <title>Tạo quãng đường</title>
-    <script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const pickUpPointSelect = document.getElementById('pickUpPointSelect');
-            const dropOffPointSelect = document.getElementById('dropOffPointSelect');
-            const nameInput = document.getElementById('nameInput');
-            pickUpPointSelect.addEventListener('change', updateNameInput);
-            dropOffPointSelect.addEventListener('change', updateNameInput);
-            function updateNameInput() {
-                const pickUpOption = pickUpPointSelect.options[pickUpPointSelect.selectedIndex];
-                const dropOffOption = dropOffPointSelect.options[dropOffPointSelect.selectedIndex];
-                const pickUpCity = pickUpOption.text.split('-')[1].trim();
-                const dropOffCity = dropOffOption.text.split('-')[1].trim();
-                nameInput.value = pickUpCity + ' - ' + dropOffCity;
-            }
-        });
-    </script>
+        .center-div {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/admin/routeManager">Quay lại</a>
-<form id="routeForm" action="${pageContext.request.contextPath}/admin/routeManager/create" METHOD="POST">
-    <label>Tên của chuyến
-        <input id="nameInput" type="text" name="name" placeholder="Hãy chọn điểm đi và điểm đến trước">
-    </label>
-    <br>
-    <label>
-        <select id="pickUpPointSelect" name="pickUpPoint">
-            <option value="">Lựa chọn điểm đi</option>
-            <c:forEach var="city" varStatus="loop" items="${requestScope.cityFromServer}">
-            <option value="${city.id}">
-                    ${loop.index + 1}  -   ${city.name}
-            </option>
-            </c:forEach>
-        </select>
-    </label>
-    <br>
-    <label>
-        <select id="dropOffPointSelect" name="dropOffPoint" >
-            <option value="">Lựa chọn điểm Đến</option>
-            <c:forEach var="city" varStatus="loop"  items="${requestScope.cityFromServer}">
-            <option value="${city.id}">
-                    ${loop.index + 1} - ${city.name}
-            </option>
-            </c:forEach>
-        </select>
-    </label>
-    <br>
-    <button>Thêm</button>
-</form>
+<jsp:include page="_headerAdmin.jsp"/>
+
+<div class="center-div">
+    <form id="routeForm" action="${pageContext.request.contextPath}/admin/routeManager/create" method="POST" class="row g-3">
+        <c:if test="${not empty requestScope.successMessage}">
+            <div class="alert alert-success mb-3" role="alert">
+            ${requestScope.successMessage}
+            </div>
+        </c:if>
+        <c:if test="${not empty requestScope.errorMessage}">
+            <div class="alert alert-danger mb-3" role="alert">
+            ${requestScope.errorMessage}
+            </div>
+        </c:if>
+        <c:if test="${not empty requestScope.violations.name}">
+            <div class="alert alert-danger mb-3" role="alert">
+                <c:forEach var="violation" items="${requestScope.violations.name}">
+                    ${violation}
+                </c:forEach>
+            </div>
+        </c:if>
+        <div class="col-md-6">
+            <label for="nameInput" class="form-label">Tên của chuyến</label>
+            <input id="nameInput" type="text" name="name" class="form-control" placeholder="Hãy chọn điểm đi và điểm đến trước">
+        </div>
+        <div class="col-md-3">
+            <label for="pickUpPointSelect" class="form-label">Lựa chọn điểm đi</label>
+            <select id="pickUpPointSelect" name="pickUpPoint" class="form-select" aria-label="Default select example">
+                <option value="">Lựa chọn điểm đi</option>
+                <c:forEach var="city" varStatus="loop" items="${requestScope.cityFromServer}">
+                    <option value="${city.id}">
+                            ${loop.index + 1} - ${city.name}
+                    </option>
+                </c:forEach>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="dropOffPointSelect" class="form-label">Lựa chọn điểm đến</label>
+            <select id="dropOffPointSelect" name="dropOffPoint" class="form-select" aria-label="Default select example">
+                <option value="">Lựa chọn điểm đến</option>
+                <c:forEach var="city" varStatus="loop" items="${requestScope.cityFromServer}">
+                    <option value="${city.id}">
+                            ${loop.index + 1} - ${city.name}
+                    </option>
+                </c:forEach>
+            </select>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Thêm</button>
+        </div>
+    </form>
+
+</div>
+    <jsp:include page="_footerAdmin.jsp"/>
 </body>
 </html>

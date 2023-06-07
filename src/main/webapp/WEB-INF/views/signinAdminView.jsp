@@ -15,7 +15,7 @@
 </head>
 <body class="bg-light">
 <section class="section-content mx-auto" style="margin: 100px 0; max-width: 380px;">
-  <h3 class="mb-3 p-3 text-center bg-primary text-white rounded">Shop Đặt vé xe</h3>
+  <h3 class="mb-3 p-3 text-center bg-primary text-white rounded"> Nhà xe Long Phú</h3>
   <div class="card">
     <div class="card-body">
       <h4 class="card-title mb-3">Đăng nhập Admin</h4>
@@ -56,10 +56,15 @@
               </ul>
             </div>
           </c:if>
-        </div>
-        <a href="https://accounts.google.com/o/oauth2/auth?client_id=1088499236693-v50rr2v1k9p3t17khkcum2og4l0g3a3v.apps.googleusercontent.com&redirect_uri=http://localhost:8080/demo1_war_exploded/callback&response_type=code&scope=email&prompt=select_account" class="btn btn-primary w-100">Login with Google</a>
-        <br>
+          <br>
+          <div class="mb-3 btn btn btn-light w-100">
+            <a class="google-signin-button" href="https://accounts.google.com/o/oauth2/auth?client_id=1088499236693-v50rr2v1k9p3t17khkcum2og4l0g3a3v.apps.googleusercontent.com&redirect_uri=http://localhost:8080/demo1_war_exploded/callback&response_type=code&scope=email&prompt=select_account" >Login with Google</a>
+          </div>
+
         <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
+
+
+
       </form>
     </div> <!-- card-body.// -->
   </div> <!-- card .// -->

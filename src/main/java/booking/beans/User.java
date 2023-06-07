@@ -13,7 +13,6 @@ public class User {
     private int gender;
     private String address;
     private String role;
-    private LocalDateTime createAt;
     public User() {}
 
     public User(long id,
@@ -108,13 +107,6 @@ public class User {
         this.role = role;
     }
 
-    public LocalDateTime getCreateAt() {
-        return createAt;
-    }
-
-    public void setCreateAt(LocalDateTime createAt) {
-        this.createAt = createAt;
-    }
 
     @Override
     public String toString() {
@@ -127,7 +119,6 @@ public class User {
                 .add("phoneNumber='" + phoneNumber + "'")
                 .add("gender=" + gender)
                 .add("address='" + address + "'")
-                .add("createAt='" + createAt + "'")
                 .add("role='" + role + "'")
                 .toString();
     }

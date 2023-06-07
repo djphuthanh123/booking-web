@@ -5,15 +5,25 @@
   Time: 2:32 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="vi">
+
 <head>
+    <jsp:include page="_meta.jsp"/>
     <title>401</title>
 </head>
+
 <body>
-        <h1 style="color: red">401 not found</h1>
-    <p >
-        Bạn không có quyền ở site này 1
-    </p>
+<jsp:include page="_headerAdmin.jsp"/>
+
+<section class="section-content padding-y">
+    <div class="container">
+        Không được phép truy cập khu vực này
+    </div> <!-- container.// -->
+</section> <!-- section-content.// -->
+
+<jsp:include page="_footerAdmin.jsp"/>
 </body>
+
 </html>

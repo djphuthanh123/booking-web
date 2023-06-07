@@ -1,15 +1,11 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Trang chủ</title>
-</head>
-<body>
-  <h1>Trang chủ</h1>
-  <jsp:include page="_header.jsp"/>
-</body>
-</html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+        <a  href="${pageContext.request.contextPath}/admin/signup" role="button">
+            Đăng ký
+        </a>
+        <a  href="${pageContext.request.contextPath}/admin/signin" role="button">
+            Đăng nhập admin
+        </a>
+
+

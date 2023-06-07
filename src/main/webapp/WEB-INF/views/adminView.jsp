@@ -7,20 +7,45 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 
 <html>
 <head>
-    <title> Quản lí Chung </title>
+        <jsp:include page="_meta.jsp"/>
+        <title> Quản lí Chung </title>
 </head>
 <body>
-<h1 >Quản lý Chung</h1>
-        <br>
-        <jsp:include page="_headerAdmin.jsp"/>
-        <br>
-        <span>Người dùng</span>
-        <h4 class="title">${requestScope.totalUsers}</h4>
-        <br>
-        <span>Tổng số phương tiện</span>
-        <h4 class="title">${requestScope.totalTransport}</h4>
+<jsp:include page="_headerAdmin.jsp"/>
+<section class="section-content padding-y">
+        <div class="container">
+                <div class="card bg-light">
+                        <div class="card-body p-5">
+                                <h1 class="display-5 mb-5">Quản lý website bán vé xe</h1>
+                                <div class="row">
+                                        <div class="col-6 col-lg-3">
+                                                <figure class="card">
+                                                        <div class="p-3">
+                                                                <h4 class="title">${requestScope.totalUsers}</h4>
+                                                                <span>Người dùng</span>
+                                                        </div>
+                                                </figure>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                                <figure class="card">
+                                                        <div class="p-3">
+                                                                <h4 class="title">${requestScope.totalTransport}</h4>
+                                                                <span>Phương tiện</span>
+                                                        </div>
+                                                </figure>
+                                        </div>
+
+                                </div>
+                        </div>
+                </div> <!-- card.// -->
+        </div> <!-- container.// -->
+</section> <!-- section-content.// -->
+<jsp:include page="_footerAdmin.jsp"/>
+
 </body>
 </html>

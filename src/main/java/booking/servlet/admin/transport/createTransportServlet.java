@@ -39,15 +39,28 @@ public class createTransportServlet extends HttpServlet {
         transport.setSlot(Integer.parseInt(req.getParameter("slot")));
         Map<String, List<String>> violations = new HashMap<>();
         violations.put("nameOfViolation", Validator.of(transport.getNameOfTransport())
+                .isNotNullAndEmpty()
+                .isNotBlankAtBothEnds()
+                .isAtMostOfLength(100)
                 .toList());
         violations.put("description",Validator.of(transport.getDescription())
+                .isAtMostOfLength(350)
                 .toList());
 
         int sumOfViolation = violations.values().stream().mapToInt(List::size).sum();
-
+        String successMessage = "Thêm thành công";
+        String errorMessage = "Thêm thất bại ";
         if (sumOfViolation == 0){
             ImageUD.upload(req).ifPresent(transport::setImageName);
-            transportService.insert(transport);
+            try {
+                transportService.insert(transport);
+                req.setAttribute("successMessage", successMessage);
+            }
+            catch(Exception e) {
+                req.setAttribute("transport", transport);
+                req.setAttribute("errorMessage", errorMessage);
+            }
+
             req.getRequestDispatcher("/WEB-INF/views/transportCreateView.jsp").forward(req,resp);
         }else {
             req.setAttribute("transport", transport);

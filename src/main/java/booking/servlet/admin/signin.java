@@ -43,7 +43,8 @@ public class signin extends HttpServlet {
             User user = userFromServer.get();
             if (Arrays.asList("ADMIN", "EMPLOYEE").contains(user.getRole())) {
                 req.getSession().setAttribute("currentUser", user);
-                resp.sendRedirect(req.getContextPath() + "/admin");            }
+                resp.sendRedirect(req.getContextPath() + "/admin");
+            }
         } else {
             req.setAttribute("values", values);
             req.setAttribute("violations", violations);

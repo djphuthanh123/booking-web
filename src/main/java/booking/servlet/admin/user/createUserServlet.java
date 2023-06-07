@@ -36,7 +36,7 @@ public class createUserServlet extends HttpServlet {
         user.setGender(Integer.parseInt(req.getParameter("gender")));
         user.setAddress(req.getParameter("address"));
         user.setRole(req.getParameter("role"));
-        user.setCreateAt(LocalDateTime.now());
+
 
 
         Map<String, List<String>> violations = new HashMap<>();
@@ -64,7 +64,6 @@ public class createUserServlet extends HttpServlet {
         // Đếm lỗi trong map, nếu có lỗi trả về
         int sumOfViolations = violations.values().stream().mapToInt(List::size).sum();
         if (sumOfViolations == 0) {
-            System.out.println(user.toString());
             userService.insert(user);
         } else {
             req.setAttribute("user", user);

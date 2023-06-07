@@ -50,10 +50,20 @@ public class updateTransport extends HttpServlet {
         String deleteImage = req.getParameter("deleteImage");
         Map<String, List<String>> violations = new HashMap<>();
         violations.put("userName", Validator.of(transport.getNameOfTransport())
+                .isNotNullAndEmpty()
+                .isNotBlankAtBothEnds()
+                .isAtMostOfLength(100)
+                .toList());
+        violations.put("licensePlate", Validator.of(transport.getLicensePlate())
+                .isNotEmpty()
+                .toList());
+        violations.put("descriptionViolations", Validator.of(transport.getDescription())
+                .isAtMostOfLength(350)
                 .toList());
         // Đếm lỗi của list trong map
         int sumOfViolation = violations.values().stream().mapToInt(List::size).sum();
-        System.out.println(transport.toString());
+        String successMessage = "Thêm thành công";
+        String errorMessage = "Thêm thất bại ";
         // Xử lí ảnh
         if (sumOfViolation == 0){
           if (transport.getImageName() != null){
@@ -69,8 +79,14 @@ public class updateTransport extends HttpServlet {
           }else {
               ImageUD.upload(req).ifPresent(transport::setImageName);
           }
-            transportService.update(transport);
-            req.setAttribute("transport", transport);
+            try {
+                transportService.update(transport);
+                req.setAttribute("successMessage", successMessage);
+            }
+            catch(Exception e) {
+                req.setAttribute("transport", transport);
+                req.setAttribute("errorMessage", errorMessage);
+            }
         }else {
             req.setAttribute("transport", transport);
             req.setAttribute("violations", violations);

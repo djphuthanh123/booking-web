@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 @RegisterBeanMapper(Transport.class)
 public interface TransportDAO extends DAO<Transport> {
-    @SqlUpdate("INSERT INTO transport (nameOfTransport, imageName, license_plate, description, slot) "
+    @SqlUpdate("INSERT INTO transport (nameOfTransport, imageName, licensePlate, description, slot) "
             +
             "VALUES (:nameOfTransport, :imageName, :licensePlate ,:description , :slot)")
     @GetGeneratedKeys("id")
@@ -48,8 +48,7 @@ public interface TransportDAO extends DAO<Transport> {
     List<Transport> getOrderedPart(@Bind("limit") int limit, @Bind("offset") int offset,
                                    @Define("orderBy") String orderBy, @Define("orderDir") String orderDir);
 
-//    SqlQuery("SELECT c.* FROM product_category pc JOIN category c ON pc.categoryId = c.id WHERE productId = :productId")
-//    Optional<Transport> getByTripsId(@Bind("productId") long productId);
+
 
     @SqlQuery("SELECT COUNT(id) FROM Transport")
     int count();

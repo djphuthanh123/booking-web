@@ -20,9 +20,7 @@ public class AuthorizationFilter implements Filter {
         HttpSession session = request.getSession(false);
 
         String loginURI = request.getContextPath() + "/admin/signin";
-        System.out.println(request.getContextPath());
         String admin401URI = request.getContextPath() + "/admin/401";
-        System.out.println(admin401URI);
         //
         Optional<String> userRole = Optional.ofNullable(session)
                 .map(s -> (User) s.getAttribute("currentUser"))

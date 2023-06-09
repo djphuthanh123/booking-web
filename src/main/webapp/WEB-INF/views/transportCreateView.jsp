@@ -9,7 +9,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <jsp:include page="_meta.jsp"/>
+    <jsp:include page="_metaAdmin.jsp"/>
     <title>Title</title>
 </head>
 <body>

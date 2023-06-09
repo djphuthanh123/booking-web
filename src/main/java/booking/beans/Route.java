@@ -7,18 +7,17 @@
             private String name;
                 private long pickUpPoint;
                     private long dropOffPoint;
-                        private double distance;
+
 
         public Route(long id,
                      String name,
                      long pickUpPoint,
-                     long dropOffPoint,
-                     double distance) {
+                     long dropOffPoint
+                     ) {
             this.id = id;
             this.name = name;
             this.pickUpPoint = pickUpPoint;
             this.dropOffPoint = dropOffPoint;
-            this.distance = distance;
         }
 
         public Route() {
@@ -56,13 +55,7 @@
             this.dropOffPoint = dropOffPoint;
         }
 
-        public double getDistance() {
-            return distance;
-        }
 
-        public void setDistance(double distance) {
-            this.distance = distance;
-        }
 
         @Override
         public String toString() {
@@ -70,7 +63,6 @@
                     .add("id= "+ id)
                     .add("name= "+ name)
                     .add("pickUpPoint= " + pickUpPoint)
-                    .add("dropOffPoint= " + dropOffPoint)
-                    .add("distance= " + distance).toString();
+                    .add("dropOffPoint= " + dropOffPoint).toString();
         }
     }

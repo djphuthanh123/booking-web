@@ -1,7 +1,6 @@
 package booking.servlet.client.home;
 
 import booking.Service.CitiesService;
-import booking.Service.TripsService;
 import booking.beans.Cities;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

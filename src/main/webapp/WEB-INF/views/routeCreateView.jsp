@@ -11,7 +11,7 @@
 <fmt:setLocale value="vi_VN"/>
 <html>
 <head>
-    <jsp:include page="_meta.jsp"/>
+    <jsp:include page="_metaAdmin.jsp"/>
     <title>Tạo quãng đường</title>
     <style>
         body {

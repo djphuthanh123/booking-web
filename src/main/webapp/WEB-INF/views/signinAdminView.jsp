@@ -10,7 +10,7 @@
 
 <html>
 <head>
-  <jsp:include page="_meta.jsp"/>
+  <jsp:include page="_metaAdmin.jsp"/>
   <title>Đăng nhập</title>
 </head>
 <body class="bg-light">
@@ -57,14 +57,13 @@
             </div>
           </c:if>
           <br>
-          <div class="mb-3 btn btn btn-light w-100">
-            <a class="google-signin-button" href="https://accounts.google.com/o/oauth2/auth?client_id=1088499236693-v50rr2v1k9p3t17khkcum2og4l0g3a3v.apps.googleusercontent.com&redirect_uri=http://localhost:8080/demo1_war_exploded/callback&response_type=code&scope=email&prompt=select_account" >Login with Google</a>
+          <div class="mb-3 btn btn-primary w-100">
+            <i class="bi bi-google "></i>
+            <a class="text-light" href="https://accounts.google.com/o/oauth2/auth?client_id=1088499236693-v50rr2v1k9p3t17khkcum2og4l0g3a3v.apps.googleusercontent.com&redirect_uri=http://localhost:8080/demo1_war_exploded/callback&response_type=code&scope=email&prompt=select_account" >
+            Đăng nhập bằng tài khoản Google
+            </a>
           </div>
-
         <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
-
-
-
       </form>
     </div> <!-- card-body.// -->
   </div> <!-- card .// -->

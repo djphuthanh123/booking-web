@@ -15,8 +15,8 @@
 
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/admin/tripsManage">Quay lại</a>
-<form action="${pageContext.request.contextPath}/admin/tripsManage/create"
+<a href="${pageContext.request.contextPath}/admin/tripsManager">Quay lại</a>
+<form action="${pageContext.request.contextPath}/admin/tripsManager/create"
       method="POST"
       enctype="multipart/form-data">
 

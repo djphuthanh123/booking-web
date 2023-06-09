@@ -10,30 +10,279 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c03fda-fc67-4fef-86ee-e0616283c3d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/gg-login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/Service/BillService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/Service/SeatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/Service/TripsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/beans/Bill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/beans/Seat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/beans/Trips.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/dao/BillDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/dao/SeatDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/dao/TripsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/trips/createTripServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/trips/deleteTripServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/trips/detailTripsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/trips/tripsManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/trips/updateTripServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/client/home/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/client/home/bill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/client/home/chooseSeat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/client/home/storageCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/client/listRoute/listRoute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/client/signOut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/billView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chooseSeat.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/listTrips.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/signInUserView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tripsCreateView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tripsDetailView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tripsManagerView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tripsUpdateView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/_footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/_header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/_meta.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/animation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/elegenticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/fontawesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/hover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/icofont.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/ionicons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/jquery.fancybox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/jquery.mCustomScrollbar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/linearicons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/my.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/owl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/payment.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/simple-line-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/css/themify-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/ElegantIcons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/ElegantIcons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/ElegantIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/ElegantIcons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/Linearicons-Free.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/Linearicons-Free.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/Linearicons-Free.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/Linearicons-Free.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/Linearicons-Free.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/SignericaMedium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/SignericaMedium.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/SignericaMedium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/SignericaMedium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/icofont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/icofont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/icofont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/icofont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/icofont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/ionicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/ionicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/ionicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/ionicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/simple-Line-Icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/simple-Line-Icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/simple-Line-Icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/simple-Line-Icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/simple-Line-Icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/themify.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/themify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/themify.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/fonts/themify.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/background/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/background/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/background/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/background/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/background/pattern-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/clients/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/clients/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/clients/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/clients/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/clients/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/fancybox/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/fancybox/fancybox_loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/fancybox/fancybox_loading@2x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/fancybox/fancybox_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/fancybox/fancybox_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/fancybox/fancybox_sprite@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/limouse1jpg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/limouse2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/limouse3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/syhung.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/xegiuongnam1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/xegiuongnam2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/xegiuongnam3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/xekhach1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/xekhach2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/gallery/xekhach3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/icons/icon-cross.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/icons/icon-toggle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/icons/resize.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/icons/submenu-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/logo-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/logo-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/logo-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/main-slider/image-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/main-slider/image-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/main-slider/leaderboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/experiance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/news-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/team-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/team-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/team-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/testimonial.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/images/resource/xekhach1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/appear.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/isotope.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/jquery.easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/jquery.fancybox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/jquery.mCustomScrollbar.concat.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/jquery.paroller.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/jquery.scrollTo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/map-script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/mixitup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/owl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/parallax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/respond.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/tilt.jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/chieuLong/js/wow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ElegantIcons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ElegantIcons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ElegantIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ElegantIcons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/Linearicons-Free.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/Linearicons-Free.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/Linearicons-Free.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/Linearicons-Free.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/Linearicons-Free.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/SignericaMedium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/SignericaMedium.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/SignericaMedium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/SignericaMedium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/icofont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/icofont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/icofont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/icofont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/icofont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ionicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ionicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ionicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/ionicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/simple-Line-Icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/simple-Line-Icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/simple-Line-Icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/simple-Line-Icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/simple-Line-Icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/themify.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/themify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/themify.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/themify.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/google-logo-6278331_960_720.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/Service/Authentication/RefreshTokenService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/Service/RouteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/Service/RouteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/Utils/ConstantUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/Utils/ConstantUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/beans/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/beans/Route.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/booking/dao/RouteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/dao/RouteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/GoogleCallbackServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/GoogleCallbackServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/route/createRouteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/route/createRouteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/route/routeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/route/routeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/createTransportServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/createTransportServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/deleteTransportServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/transport/deleteTransportServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/user/createUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/user/createUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/user/userManagerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/admin/user/userManagerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_footerAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_footerAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_meta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_meta.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booking/servlet/client/signIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booking/servlet/client/signin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_headerAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_headerAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_meta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/_metaAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin401View.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin401View.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adminView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adminView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/routeCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/routeCreateView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/routeManagerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/routeManagerView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/signinAdminView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/signinAdminView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportCreateView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportDetailView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportDetailView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportManagerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportManagerView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportUpdateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/transportUpdateView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userCreateView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userDetailView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userDetailView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManagerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManagerView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userUpdateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userUpdateView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/gg-login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +292,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
-        <option value="CSS File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -90,36 +339,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/FER/BookShopWeb-main&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/SWP391/booking-web",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\SWP391\demo1\src\main\webapp\WEB-INF\views" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\SWP391\demo1\src\main\java\booking\servlet\client" />
       <recent name="C:\SWP391\demo1\src\main\webapp" />
+      <recent name="C:\SWP391\demo1\src\main\webapp\chieuLong" />
+      <recent name="C:\SWP391\demo1\src\main\webapp\css\chieuLongCss" />
+      <recent name="C:\SWP391\demo1\src\main\webapp\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\SWP391\demo1\src\main\webapp\chieuLong\fonts" />
+      <recent name="C:\SWP391\demo1\src\main\webapp\chieuLong" />
+      <recent name="C:\SWP391\demo1\src\main\webapp\fonts" />
+      <recent name="C:\SWP391\demo1\src\main\webapp\js" />
+      <recent name="C:\SWP391\demo1\src\main\webapp\img" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.apache-tomcat-10.1.9">
@@ -288,7 +547,16 @@
       <workItem from="1686152485046" duration="4689000" />
       <workItem from="1686162842737" duration="14550000" />
       <workItem from="1686178686904" duration="430000" />
-      <workItem from="1686179654780" duration="911000" />
+      <workItem from="1686179654780" duration="1235000" />
+      <workItem from="1686181343430" duration="593000" />
+      <workItem from="1686186947010" duration="666000" />
+      <workItem from="1686199853486" duration="631000" />
+      <workItem from="1686211798294" duration="6717000" />
+      <workItem from="1686220697183" duration="3357000" />
+      <workItem from="1686224190236" duration="4711000" />
+      <workItem from="1686229502561" duration="1847000" />
+      <workItem from="1686232394541" duration="328000" />
+      <workItem from="1686235689776" duration="2216000" />
     </task>
     <servers />
   </component>

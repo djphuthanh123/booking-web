@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-        <jsp:include page="_meta.jsp"/>
+        <jsp:include page="_metaAdmin.jsp"/>
         <title>Thông tin người dùng #${requestScope.user.id}</title>
 </head>
 <body>

@@ -1,7 +1,5 @@
 package booking.servlet.client.home;
 
-import java.time.LocalDate;
-
 import booking.Service.BillService;
 import booking.Service.SeatService;
 import booking.Service.TripsService;
@@ -17,6 +15,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;

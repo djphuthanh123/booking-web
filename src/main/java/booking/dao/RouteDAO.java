@@ -16,8 +16,8 @@ import java.util.Optional;
 public interface RouteDAO extends DAO<Route>{
 
     @Override
-    @SqlUpdate("INSERT INTO routes (id, name, pickUpPoint, dropOffPoint,distance) " +
-            "VALUES (default, :name, :pickUpPoint, :dropOffPoint, :distance)")
+    @SqlUpdate("INSERT INTO routes (id, name, pickUpPoint, dropOffPoint) " +
+            "VALUES (default, :name, :pickUpPoint, :dropOffPoint)")
     @GetGeneratedKeys("id")
     long insert(@BindBean Route route);
 
@@ -26,7 +26,6 @@ public interface RouteDAO extends DAO<Route>{
     @SqlUpdate("UPDATE routes SET name = :name, " +
             "pickUpPoint = :pickUpPoint, " +
             "dropOffPoint = :dropOffPoint, " +
-            "distance = :distance " +
             "WHERE (id = :id) ")
     void update(@BindBean Route route);
 

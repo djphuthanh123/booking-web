@@ -13,7 +13,7 @@
 <html lang="vi">
 
 <head>
-    <jsp:include page="_meta.jsp"/>
+    <jsp:include page="_metaAdmin.jsp"/>
     <title>Sửa người dùng #${requestScope.user.id}</title>
 </head>
 

@@ -61,9 +61,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ${fn:startsWith(servletPath, '/admin/reviewManager') ? 'active' : ''}"
-                       href="${pageContext.request.contextPath}/admin/reviewManager">
-                        <i class="bi bi-star"></i> Quản lý đánh giá
+                    <a class="nav-link ${fn:startsWith(servletPath, '/admin/tripsManage') ? 'active' : ''}"
+                       href="${pageContext.request.contextPath}/admin/tripsManage">
+                        <i class="bi bi-star"></i> Quản lý Chuyến xe
                     </a>
                 </li>
                 <li class="nav-item">
